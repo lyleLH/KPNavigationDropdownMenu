@@ -4,6 +4,14 @@
 ###安装
 将KPNavigationDropdownMenu文件夹拖进工程即可
 ###使用
+- 增加`KPNavigationDropdownMenu *topMenu ` 属性
+
+```
+@interface KPOrderListViewController 
+@property (nonatomic,strong)KPNavigationDropdownMenu *topMenu ;
+@end
+
+```
 - 将控制器的`navigationItem.titleView`设置为`topMenu ` 视图
 
 ```

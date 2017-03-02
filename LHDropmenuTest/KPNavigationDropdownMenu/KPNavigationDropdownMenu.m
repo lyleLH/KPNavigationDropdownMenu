@@ -8,6 +8,8 @@
 
 #import "KPNavigationDropdownMenu.h"
 #import "UIButton+Block.h"
+#import "NSString+LHSizeOfString.h"
+
 #define kWindowHeight CGRectGetHeight([UIScreen mainScreen].applicationFrame)
 #define kWindowWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
@@ -63,7 +65,15 @@ const NSUInteger kOrderListCategoryButtonTagOffset = 999;
     menuBackgroundViewFrame.origin.y = 64;
     menuBackgroundViewFrame.size.height = [UIScreen mainScreen].bounds.size.height - 64;
     self.menuBackgroundView.frame = menuBackgroundViewFrame;
-    self.menuContentView.frame = CGRectMake(0, -((self.titleArray.count/3)* self.categoryButtonHeight + 15 *4), [UIScreen mainScreen].bounds.size.width,((self.titleArray.count/3)* self.categoryButtonHeight + 15 *3));
+    CGFloat contentHeight = 0.0f;
+    NSUInteger col  = 0;
+    if(self.titleArray.count<=3) {
+        col = 1;
+    }else {
+        col = self.titleArray.count/3+1;
+    }
+    contentHeight = col * self.categoryButtonHeight + 15 *3;
+    self.menuContentView.frame = CGRectMake(0, -((self.titleArray.count/3)* self.categoryButtonHeight + 15 *4), [UIScreen mainScreen].bounds.size.width,contentHeight);
     [self.menuBackgroundView addSubview:self.menuContentView];
     
 }
@@ -121,18 +131,19 @@ const NSUInteger kOrderListCategoryButtonTagOffset = 999;
                 [categoryBtn setTitleColor:[self colorWithHex:0x9f9f9f] forState:UIControlStateNormal];
                 categoryBtn.layer.borderColor = [self colorWithHex:0x9f9f9f].CGColor;
             }
+            
             [categoryBtn setTitle:self.titleArray[index] forState:UIControlStateNormal];
+            
             categoryBtn.titleLabel.font  = [UIFont systemFontOfSize:15];
             categoryBtn.tag = index+kOrderListCategoryButtonTagOffset;
             categoryBtn.layer.borderWidth  = 0.5f;
             [categoryBtn setFrame:CGRectMake((index%3)*((kWindowWidth-60)/3+15)+15 , (index/3)*(35+15)+15 , (kWindowWidth-60)/3, 35)];
-            
             [categoryBtn handleControlEvent:UIControlEventTouchUpInside withBlock:^{
                 [self setTitle:[self.titleArray objectAtIndex:index] forState:UIControlStateNormal];
                 NSUInteger selectedTag = index+kOrderListCategoryButtonTagOffset;
                 UIButton * btnNew = (UIButton *)[self.menuContentView viewWithTag:selectedTag];
                 [btnNew setTitleColor:[self colorWithHex:0xff6c00] forState:UIControlStateNormal];
-                 btnNew.layer.borderColor = [self colorWithHex:0xff6c00].CGColor;
+                btnNew.layer.borderColor = [self colorWithHex:0xff6c00].CGColor;
                 
                 for(NSInteger notNewIndex = 0; notNewIndex <self.titleArray.count;notNewIndex ++) {
                     if(notNewIndex+kOrderListCategoryButtonTagOffset != selectedTag ){
@@ -143,12 +154,20 @@ const NSUInteger kOrderListCategoryButtonTagOffset = 999;
                 }
                 
                 if(_categoryBtnClicked){
+                    NSInteger index =  categoryBtn.tag - kOrderListCategoryButtonTagOffset;
+                    NSString * title = @"";
+                    title = [self.titleArray objectAtIndex:index];
+                    [self setTitle:title forState:UIControlStateNormal];
+                    
+                    //                    [self setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -CGRectGetWidth(self.imageView.frame), 0.0, CGRectGetWidth(self.imageView.frame) + self.arrowPadding)];
+                    CGSize titleSize  = [title lh_sizeOfStrWithFont:[UIFont systemFontOfSize:18]];
+                    [self setImageEdgeInsets:UIEdgeInsetsMake(0.0, titleSize.width + self.arrowPadding, 0.0, -titleSize.width)];
                     _categoryBtnClicked (categoryBtn);
                 }
                 [self hide];
             }];
             [_menuContentView addSubview:categoryBtn];
-
+            
         }
         [self.menuBackgroundView addSubview:self.menuContentView];
     }

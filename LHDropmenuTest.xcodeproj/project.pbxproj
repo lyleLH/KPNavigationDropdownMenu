@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982EFA5B1E67D23C00D01516 /* NSString+LHSizeOfString.m in Sources */ = {isa = PBXBuildFile; fileRef = 982EFA5A1E67D23C00D01516 /* NSString+LHSizeOfString.m */; };
 		98CFC1021E5FD86F002BCD3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CFC1011E5FD86F002BCD3D /* main.m */; };
 		98CFC1051E5FD86F002BCD3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CFC1041E5FD86F002BCD3D /* AppDelegate.m */; };
 		98CFC1081E5FD86F002BCD3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CFC1071E5FD86F002BCD3D /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		982EFA591E67D23C00D01516 /* NSString+LHSizeOfString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LHSizeOfString.h"; sourceTree = "<group>"; };
+		982EFA5A1E67D23C00D01516 /* NSString+LHSizeOfString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LHSizeOfString.m"; sourceTree = "<group>"; };
 		98CFC0FD1E5FD86F002BCD3D /* LHDropmenuTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHDropmenuTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CFC1011E5FD86F002BCD3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98CFC1031E5FD86F002BCD3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		98CFC11D1E5FE20C002BCD3D /* KPNavigationDropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
+				982EFA591E67D23C00D01516 /* NSString+LHSizeOfString.h */,
+				982EFA5A1E67D23C00D01516 /* NSString+LHSizeOfString.m */,
 				98CFC11E1E5FE20C002BCD3D /* KPNavigationDropdownMenu.h */,
 				98CFC11F1E5FE20C002BCD3D /* KPNavigationDropdownMenu.m */,
 				98CFC1201E5FE20C002BCD3D /* UIButton+Block.h */,
@@ -168,6 +173,7 @@
 				98CFC1231E5FE20C002BCD3D /* UIButton+Block.m in Sources */,
 				98CFC1051E5FD86F002BCD3D /* AppDelegate.m in Sources */,
 				98CFC1221E5FE20C002BCD3D /* KPNavigationDropdownMenu.m in Sources */,
+				982EFA5B1E67D23C00D01516 /* NSString+LHSizeOfString.m in Sources */,
 				98CFC1021E5FD86F002BCD3D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +321,7 @@
 				98CFC1161E5FD86F002BCD3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -23,7 +23,7 @@
 
 - (KPNavigationDropdownMenu *)topMenu {
     if(!_topMenu) {
-        _topMenu = [[KPNavigationDropdownMenu alloc] initWithNavigationController:self.navigationController andTitles:@[@"全部订单", @"悬赏订单", @"服务订单", @"商品订单",@"闪付订单",@"维保订单"]];
+        _topMenu = [[KPNavigationDropdownMenu alloc] initWithNavigationController:self.navigationController andTitles:@[@"全部订单", @"悬赏订单", @"服务订单", @"商品订单",@"闪付订单",@"维保订单",@"全部订单", @"悬赏订单", @"服务订单", @"商品订单",@"闪付订单",@"维保订单"]];
         _topMenu.categoryBtnClicked = ^(UIButton *btn) {
             NSLog(@"%ld",btn.tag - kOrderListCategoryButtonTagOffset);
             

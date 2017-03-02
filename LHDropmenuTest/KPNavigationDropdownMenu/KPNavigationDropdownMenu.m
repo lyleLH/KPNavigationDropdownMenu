@@ -70,7 +70,11 @@ const NSUInteger kOrderListCategoryButtonTagOffset = 999;
     if(self.titleArray.count<=3) {
         col = 1;
     }else {
-        col = self.titleArray.count/3+1;
+        if(self.titleArray.count%3==0){
+            col = self.titleArray.count/3;
+        }else{
+            col = self.titleArray.count/3+1;
+        }
     }
     contentHeight = col * self.categoryButtonHeight + 15 *3;
     self.menuContentView.frame = CGRectMake(0, -((self.titleArray.count/3)* self.categoryButtonHeight + 15 *4), [UIScreen mainScreen].bounds.size.width,contentHeight);

@@ -76,7 +76,8 @@ const NSUInteger kOrderListCategoryButtonTagOffset = 999;
             col = self.titleArray.count/3+1;
         }
     }
-    contentHeight = col * self.categoryButtonHeight + 15 *3;
+    contentHeight = col * self.categoryButtonHeight + 15 *(2+col-1);
+    
     self.menuContentView.frame = CGRectMake(0, -((self.titleArray.count/3)* self.categoryButtonHeight + 15 *4), [UIScreen mainScreen].bounds.size.width,contentHeight);
     [self.menuBackgroundView addSubview:self.menuContentView];
     

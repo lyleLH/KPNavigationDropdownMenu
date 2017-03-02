@@ -10,7 +10,7 @@
 #import "UIButton+Block.h"
 #import "NSString+LHSizeOfString.h"
 
-#define kWindowHeight CGRectGetHeight([UIScreen mainScreen].applicationFrame)
+#define kWindowHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 #define kWindowWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
 const NSUInteger kOrderListCategoryButtonTagOffset = 999;

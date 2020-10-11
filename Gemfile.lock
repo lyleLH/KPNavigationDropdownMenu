@@ -131,6 +131,7 @@ GEM
       xcpretty-travis-formatter (>= 0.0.3)
     fastlane-plugin-firim (0.2.2)
       firim (~> 0)
+    fastlane-plugin-versioning (0.4.4)
     ffi (1.13.1)
     firim (0.2.5)
       fastlane (>= 2.1.0, < 3.0.0)
@@ -243,6 +244,7 @@ DEPENDENCIES
   cocoapods
   fastlane
   fastlane-plugin-firim
+  fastlane-plugin-versioning
 
 BUNDLED WITH
    1.17.3

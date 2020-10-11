@@ -1,0 +1,73 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  	
+
+  		lane :branchSwitch do 
+  			# 切到 develop 分支
+		  sh 'git checkout develop'
+		  # 代码
+		  git_pull  # build 号加1
+
+		  increment_build_number_in_plist(
+		    target: "xxx"
+		  )
+		   # 下面是拿到新的版本号，提交代码
+		  build_number = get_build_number_from_plist(target: "xxx")
+		  git_commit(path:".", message:"Bump build to #{build_number}")
+		  sh 'git push origin develop'
+		  
+		  # pod install
+		  cocoapods(repo_update: false)  
+
+		end
+
+
+		lane :podclean do
+
+			cocoapods(
+			  clean: true,
+			  podfile: "./Podfile"
+			)
+		
+		end
+
+  	  desc "ipa打包"
+	  lane :createIpa do
+	    # sigh(adhoc:true)  #如果要使用ad-hoc打包, 则需打开此项配置
+	    gym(scheme: "LHDropmenuTest",
+	    	workspace: "LHDropmenuTest.xcworkspace",
+	    	configuration: "Debug",
+	    	clean: true, 
+	    	export_method:"development")
+
+	    enable_automatic_code_signing(path: "LHDropmenuTest.xcodeproj")
+
+	    end
+
+	  desc "Deploy a test version to the fir.im" 
+
+	  lane :fir do
+	  	podclean
+	    createIpa 
+	    firim(firim_api_token: "c2924dd55716e1a4f2ce7e1c407cc141") 
+
+		end 
+
+end

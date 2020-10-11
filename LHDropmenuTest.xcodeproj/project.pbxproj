@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6C46FB3144D217B67FB5E9 /* Pods_LHDropmenuTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2997FBE177A9760D7573BD /* Pods_LHDropmenuTest.framework */; };
 		982EFA5B1E67D23C00D01516 /* NSString+LHSizeOfString.m in Sources */ = {isa = PBXBuildFile; fileRef = 982EFA5A1E67D23C00D01516 /* NSString+LHSizeOfString.m */; };
 		98CFC1021E5FD86F002BCD3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CFC1011E5FD86F002BCD3D /* main.m */; };
 		98CFC1051E5FD86F002BCD3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98CFC1041E5FD86F002BCD3D /* AppDelegate.m */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C4982DEEDF2280089113895 /* Pods-LHDropmenuTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHDropmenuTest.release.xcconfig"; path = "Target Support Files/Pods-LHDropmenuTest/Pods-LHDropmenuTest.release.xcconfig"; sourceTree = "<group>"; };
 		982EFA591E67D23C00D01516 /* NSString+LHSizeOfString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LHSizeOfString.h"; sourceTree = "<group>"; };
 		982EFA5A1E67D23C00D01516 /* NSString+LHSizeOfString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LHSizeOfString.m"; sourceTree = "<group>"; };
 		98CFC0FD1E5FD86F002BCD3D /* LHDropmenuTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHDropmenuTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +35,8 @@
 		98CFC11F1E5FE20C002BCD3D /* KPNavigationDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPNavigationDropdownMenu.m; sourceTree = "<group>"; };
 		98CFC1201E5FE20C002BCD3D /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
 		98CFC1211E5FE20C002BCD3D /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		DA2997FBE177A9760D7573BD /* Pods_LHDropmenuTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHDropmenuTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E33FDEF656F23BABDBB07F5D /* Pods-LHDropmenuTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHDropmenuTest.debug.xcconfig"; path = "Target Support Files/Pods-LHDropmenuTest/Pods-LHDropmenuTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,17 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F6C46FB3144D217B67FB5E9 /* Pods_LHDropmenuTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CCF568142A4BE5D695BA7E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E33FDEF656F23BABDBB07F5D /* Pods-LHDropmenuTest.debug.xcconfig */,
+				8C4982DEEDF2280089113895 /* Pods-LHDropmenuTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		98CFC0F41E5FD86F002BCD3D = {
 			isa = PBXGroup;
 			children = (
 				98CFC0FF1E5FD86F002BCD3D /* LHDropmenuTest */,
 				98CFC0FE1E5FD86F002BCD3D /* Products */,
+				0CCF568142A4BE5D695BA7E3 /* Pods */,
+				A99A673F9E1C785DEE52E7E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,14 @@
 			path = KPNavigationDropdownMenu;
 			sourceTree = "<group>";
 		};
+		A99A673F9E1C785DEE52E7E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA2997FBE177A9760D7573BD /* Pods_LHDropmenuTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98CFC1141E5FD86F002BCD3D /* Build configuration list for PBXNativeTarget "LHDropmenuTest" */;
 			buildPhases = (
+				DD67F141EC7B577357981432 /* [CP] Check Pods Manifest.lock */,
 				98CFC0F91E5FD86F002BCD3D /* Sources */,
 				98CFC0FA1E5FD86F002BCD3D /* Frameworks */,
 				98CFC0FB1E5FD86F002BCD3D /* Resources */,
+				DE2E54952B584D2B8F0F269D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,7 @@
 				TargetAttributes = {
 					98CFC0FC1E5FD86F002BCD3D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = F4KY6PNR8V;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +166,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -163,6 +191,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD67F141EC7B577357981432 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LHDropmenuTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2E54952B584D2B8F0F269D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LHDropmenuTest/Pods-LHDropmenuTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LHDropmenuTest/Pods-LHDropmenuTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98CFC0F91E5FD86F002BCD3D /* Sources */ = {
@@ -282,8 +353,11 @@
 		};
 		98CFC1151E5FD86F002BCD3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33FDEF656F23BABDBB07F5D /* Pods-LHDropmenuTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4KY6PNR8V;
 				INFOPLIST_FILE = LHDropmenuTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyle.LHDropmenuTest;
@@ -293,8 +367,11 @@
 		};
 		98CFC1161E5FD86F002BCD3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4982DEEDF2280089113895 /* Pods-LHDropmenuTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4KY6PNR8V;
 				INFOPLIST_FILE = LHDropmenuTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyle.LHDropmenuTest;

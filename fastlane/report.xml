@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000322">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: Switch to ios podclean lane" time="0.000189">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cocoapods" time="1.995681">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: Switch to ios createIpa lane" time="0.000611">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: gym" time="39.322143">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: automatic_code_signing" time="0.029094">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: firim" time="9.777967">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

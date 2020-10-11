@@ -42,24 +42,16 @@ platform :ios do
 			)
 		   # 下面是拿到新的版本号，提交代码
 		  build_number = get_build_number_from_plist(target: "LHDropmenuTest")
-		  git_commit(path:".", message:"Bump build to #{build_number}")
+		  git_commit(path:".", message:"finished build to #{build_number}")
 		  sh 'git push origin develop'
-			
+
 		end
 
   		lane :branchSwitch do 
   			# 切到 develop 分支
 		  sh 'git checkout develop'
 		  # 代码
-		  git_pull  # build 号加1
-
-		  # increment_build_number_in_plist(
-		  #   target: "LHDropmenuTest"
-		  # )
-
-		  
-		  # pod install
-		  cocoapods(repo_update: false)  
+		  git_pull   
 
 		end
 
@@ -70,7 +62,7 @@ platform :ios do
 			  clean: true,
 			  podfile: "./Podfile"
 			)
-		
+			cocoapods(repo_update: false)  
 		end
 
   	  desc "ipa打包"

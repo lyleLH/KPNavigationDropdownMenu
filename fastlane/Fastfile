@@ -17,7 +17,35 @@ default_platform(:ios)
 
 platform :ios do
   desc "Description of what the lane does"
-  	
+  		def updateProjectBuildNumber
+ 
+			currentTime = Time.new.strftime("%Y%m%d")
+			build = get_build_number_from_plist(target: "LHDropmenuTest")
+			if build.include?"#{currentTime}."
+			# => 为当天版本 计算迭代版本号
+			lastStr = build[build.length-2..build.length-1]
+			lastNum = lastStr.to_i
+			lastNum = lastNum + 1
+			lastStr = lastNum.to_s
+			if lastNum < 10
+			lastStr = lastStr.insert(0,"0")
+			end
+			build = "#{currentTime}.#{lastStr}"
+			else
+			# => 非当天版本 build 号重置
+			build = "#{currentTime}.01"
+			end
+			puts("*************| 更新build #{build} |*************")
+			# => 更改项目 build 号
+			increment_build_number(
+			build_number: "#{build}"
+			)
+		   # 下面是拿到新的版本号，提交代码
+		  build_number = get_build_number_from_plist(target: "LHDropmenuTest")
+		  git_commit(path:".", message:"Bump build to #{build_number}")
+		  sh 'git push origin develop'
+			
+		end
 
   		lane :branchSwitch do 
   			# 切到 develop 分支
@@ -25,13 +53,10 @@ platform :ios do
 		  # 代码
 		  git_pull  # build 号加1
 
-		  increment_build_number_in_plist(
-		    target: "LHDropmenuTest"
-		  )
-		   # 下面是拿到新的版本号，提交代码
-		  build_number = get_build_number_from_plist(target: "xxx")
-		  git_commit(path:".", message:"Bump build to #{build_number}")
-		  sh 'git push origin develop'
+		  # increment_build_number_in_plist(
+		  #   target: "LHDropmenuTest"
+		  # )
+
 		  
 		  # pod install
 		  cocoapods(repo_update: false)  
@@ -40,7 +65,7 @@ platform :ios do
 
 
 		lane :podclean do
-			branchSwitch
+			
 			cocoapods(
 			  clean: true,
 			  podfile: "./Podfile"
@@ -50,7 +75,16 @@ platform :ios do
 
   	  desc "ipa打包"
 	  lane :createIpa do
+	    
+	    branchSwitch
+	    
+	    podclean
+
+	    updateProjectBuildNumber
+
 	    # sigh(adhoc:true)  #如果要使用ad-hoc打包, 则需打开此项配置
+
+
 	    gym(scheme: "LHDropmenuTest",
 	    	workspace: "LHDropmenuTest.xcworkspace",
 	    	configuration: "Debug",
@@ -64,7 +98,7 @@ platform :ios do
 	  desc "Deploy a test version to the fir.im" 
 
 	  lane :fir do
-	  	podclean
+	  	
 	    createIpa 
 	    firim(firim_api_token: "c2924dd55716e1a4f2ce7e1c407cc141") 
 

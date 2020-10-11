@@ -5,27 +5,67 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.001083">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000667">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to ios podclean lane" time="0.01427">
+      <testcase classname="fastlane.lanes" name="01: Switch to ios podclean lane" time="0.000664">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to ios branchSwitch lane" time="0.000417">
+      <testcase classname="fastlane.lanes" name="02: Switch to ios branchSwitch lane" time="0.00147">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: git checkout develop" time="0.021667">
+      <testcase classname="fastlane.lanes" name="03: git checkout develop" time="0.021408">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: git_pull" time="15.122258">
+      <testcase classname="fastlane.lanes" name="04: git_pull" time="9.686031">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: cocoapods" time="1.766791">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: cocoapods" time="1.857078">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to ios createIpa lane" time="0.001188">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: get_build_number_from_plist" time="0.071498">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: increment_build_number" time="0.715773">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: gym" time="36.797098">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: automatic_code_signing" time="0.015706">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: firim" time="9.312911">
         
       </testcase>
     

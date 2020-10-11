@@ -5,29 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000848">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.001083">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to ios podclean lane" time="0.000488">
+      <testcase classname="fastlane.lanes" name="1: Switch to ios podclean lane" time="0.01427">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to ios branchSwitch lane" time="0.012353">
+      <testcase classname="fastlane.lanes" name="2: Switch to ios branchSwitch lane" time="0.000417">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: git checkout develop" time="0.017432">
+      <testcase classname="fastlane.lanes" name="3: git checkout develop" time="0.021667">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: git_pull" time="4.784523">
-        
-          <failure message="/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:26:in `block (2 levels) in parsing_binding'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:43:in `block (2 levels) in parsing_binding'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:204:in `try_switch_to_lane'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:146:in `trigger_action_by_name'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:67:in `block (2 levels) in parsing_binding'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:76:in `run!'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/commands_generator.rb:352:in `run'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/fastlane/lib/fastlane/cli_tools_distributor.rb:119:in `take_off'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/lib/ruby/gems/2.6.0/gems/fastlane-2.162.0/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/bin/fastlane:23:in `load'&#10;/Users/tom/.rvm/rubies/ruby-2.6.5/bin/fastlane:23:in `&lt;main&gt;'&#10;/Users/tom/.rvm/gems/ruby-2.6.5/bin/ruby_executable_hooks:24:in `eval'&#10;/Users/tom/.rvm/gems/ruby-2.6.5/bin/ruby_executable_hooks:24:in `&lt;main&gt;'&#10;&#10;Exit status of command 'git pull &amp;&amp; git fetch --tags' was 1 instead of 0.&#10;There is no tracking information for the current branch.&#10;Please specify which branch you want to merge with.&#10;See git-pull(1) for details.&#10;&#10;    git pull &lt;remote&gt; &lt;branch&gt;&#10;&#10;If you wish to set tracking information for this branch you can do so with:&#10;&#10;    git branch --set-upstream-to=origin/&lt;branch&gt; develop&#10;&#10;" />
+      <testcase classname="fastlane.lanes" name="4: git_pull" time="15.122258">
         
       </testcase>
     

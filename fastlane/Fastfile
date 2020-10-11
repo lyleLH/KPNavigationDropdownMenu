@@ -60,9 +60,9 @@ platform :ios do
 			
 			cocoapods(
 			  clean: true,
-			  podfile: "./Podfile"
+			  podfile: "./Podfile",
+			  repo_update:false
 			)
-			cocoapods(repo_update: false)  
 		end
 
   	  desc "ipa打包"

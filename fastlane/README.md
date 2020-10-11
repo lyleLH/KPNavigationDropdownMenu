@@ -16,11 +16,16 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
+### ios branchSwitch
+```
+fastlane ios branchSwitch
+```
+Description of what the lane does
 ### ios podclean
 ```
 fastlane ios podclean
 ```
-Description of what the lane does
+
 ### ios createIpa
 ```
 fastlane ios createIpa

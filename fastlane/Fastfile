@@ -40,7 +40,7 @@ platform :ios do
 
 
 		lane :podclean do
-
+			branchSwitch
 			cocoapods(
 			  clean: true,
 			  podfile: "./Podfile"
